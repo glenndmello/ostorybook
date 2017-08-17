@@ -1,0 +1,54 @@
+Mode Dactylo
+(à partir de septembre 2017)
+[ajout du chapitre 14.12 Mode Dactylo]
+
+Le mode dactylo permet de travailler en se concentrant spécialement sur le texte
+de votre ouvrage. Il se présente sous la forme d'une fenêtre unique
+occupant la totalité de l'écran et se substitue à la fenêtre normale de 
+l'application.
+
+[insérer la capture d'écran]
+
+Cette présentation se compose:
+- en haut, une mini barre d'outils permettant de naviguer dans les scènes
+(liste des scènes, première scène, scène précédente, scène suivante,
+dernière scène), un bouton pour ignorer les modifications en cours et revenir
+à l'état initial, la sortie du mode dactylo pour revenir au mode normal.
+- la partie centrale est divisée en deux, dans les proportions 6/7 à gauche
+reprenant l'éditeur de texte pour la saisie et 1/7 à droite récapitulant les
+composantes liées à la scène (personnages, lieux, objets) ainsi que les
+éventuelles notes.
+- en bas, un récapitulatif statistique de la taille du texte de la scène(en vert
+si la taille maximum n'est pas atteinte, en rouge si elle est atteinte ou
+dépassée).
+
+L'objectif de cette présentation vise à vous permettre de vous concentrer sur le
+texte de la scène, sans être obligé de cliquer sur divers éléments.
+
+Vous pouvez modifier la liste des personnages, des lieux ou des objets en
+utilisant les boutons correspondants. Vous pouvez aussi modifier les notes
+éventuelles. En revanche pour modifier la relation à un autre chapitre, ou
+d'autres informations, il vous faudra revenir à l'affichage normale de
+l'application.
+
+Comme pour tout autre affichage vous disposez d'un bouton pour créer une
+nouvelle idée.
+
+Concernant la partie éditeur de texte, vous y retrouverez la traditionnelle
+barre des fonctions de mise en forme, mais vous ne disposerez pas de la
+possibilité de visualiser le code HTML. En effet, l'objectif étant de se
+focaliser sur le texte la présence de l'onglet habituel "HTML" ne serait
+qu'une diversion.
+
+[ajout dans le chapitre 2]
+Par ailleurs vous disposez d'une case à cocher pour demander le lancement de
+oStorybook avec l'interface utilisateur "Dactylo". Ne cochez cette option que
+si vous la connaissez déjà (voir le chapitre "14.12 Mode Dactylo" pour en
+savoir plus sur ce mode).
+
+[Ajout dans 5.1]
+[modification capture d'écran]
+
+[Ajout dans 5.2, après apparence]
+Vous pouvez aussi cocher l'option d'utilisation du mode "Dactylo" comme
+interface au lancement de oStorybook.

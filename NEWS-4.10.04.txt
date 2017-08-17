@@ -1,0 +1,44 @@
+News 4.10.04 (01/09/2016)
+
+Le version 4.10.04 apporte son lot habituel de nouveautés. Outre la résolution
+de quelques bugs (voir le fichier Version.txt) le principal apport concerne
+les différents rapports graphiques. En effet, depuis la reprise de Storybook je
+m'efforce de rendre indépendant le code de l'usage des différentes bibliothèques
+tierces. Dans la version 4.10.03 elles représentent 26,3Mo sur un total de
+35,7Mo. Après le nouveau codage des rapports graphiques et la suppression de la
+biliothèque JFree le gain net est de 1,8Mo sur les bibliothèques pour une taille
+d'exécutable quasi stable. Le gain peut paraître négigeable, mais il procure
+plusieurs avantages:
+- le temps de téléchargement se réduit
+- le code source accroit son indépendance à l'égard de logiciels externes
+- le rendu graphique est amélioré en s'adaptant au plus près du besoin
+
+Par ailleurs, la modification la plus flagrante est celle qui consiste à
+signaler par une * un objet accompagné de notes. Ainsi, dans la vue arbre, si on
+survol un objet signalé un popup s'ouvre automatiquement pour afficher les
+notes en question. Cette modification permettra, je l'espère, d'améliorer le
+confort de travail de chacun.
+
+Quelques détails sur les rendus graphiques
+==========================================
+a) Apparition des personnages par date
+Maintenant chaque élément est tracé en fonction de la couleur définie pour
+chaque personnage (dans la fiche personnage). Une ligne, discrète, permet de
+matérialiser la ligne temporelle de chacun.
+
+b) Utilisation des fils par date
+Le même dispositif est présent (ligne de suivi temporel, couleur de chaque trame
+définie dans la fiche d'identification du fil).
+
+c) Occurence des personnages
+Chaque personnage est représenté par un barre graphe proportinnel au nombre
+total d'apparition. Les couleurs utilisées sont celles du personnage. En
+haut du barre graphe le nombre est rappelé. En revanche la zone "légende" 
+disparaît, elle faisait franchement double emploi avec les reste de l'affichage.
+
+d) Occurence des lieux
+Bénéficie des mêmes améliorations que pour l'occurence des personnages.
+
+e) Vue Planning
+L'onglet "Ligne temporelle" est renommée en "Chronologie". Le graphique hérite
+des mêmes améliorations que celles décrites aux paragraphes a) et b).

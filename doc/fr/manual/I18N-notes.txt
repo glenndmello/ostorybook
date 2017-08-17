@@ -1,0 +1,37 @@
+Note à l'usage de la traduction
+
+oStorybook regroupe tous les messages à traduire dans un fichier unique
+intitulé messages.properties. Les traductions reprennent ce nom en insérant un
+code langue correspondant à la langue traduite. Ainsi pour le
+français le fichier porte le nom messages_fr.properties. Lorsque la langue
+connaît plusieurs variantes le code du pays est associé au code de la langue. 
+Exemple pour le portugais du Brésil : messages_pt_BR.properties. (références:
+code de la langue=iso639, code du pays=iso3166)
+
+Pour tester la traduction il existe plusieurs possibilités:
+a) un fichier à tester en permanence:
+Le fichier devra être enregistré dans le répertoire d'installation de
+oStorybook, dans un sous-dossier resources/i18n.
+b) un fichier à tester simple
+Le fichier devra être enregistré n'importe où sur le disque dur, il peut porter
+un nom quelconque. L'extension peut être différente de ".properties", exemple:
+message_a_tester.txt. Pour activer le test du fichier il faut modifier la
+ligne de commande de lancement de oStorybook de la manière suivante:
+
+java -jar /dossier_installation/oStorybook.jar --msg fichier
+
+où
+dossier_installation : est le dossier où est installé oStorybook
+fichier : est le nom du fichier à tester avec son chemin d'accès
+
+exemple:
+java -jar /usr/share/ostorybook/oStorybook.jar --msg /home/usr/fa/test/test.txt
+
+Remarque: le fichier à tester peut ne pas comporter toutes les clés de message,
+en cas d'absence d'une clé c'est le message existant par ailleurs qui sera
+utilisé selon la hiérarchie suivante:
+- fichier à tester en permanence
+- fichier interne par défaut
+Si aucune clé n'est trouvée dans l'un ou l'autre des fichiers (interne, externe,
+autre fichier) la clé sera affichée entourée de points d'exclamation, exemple:
+!cle.manquante!.

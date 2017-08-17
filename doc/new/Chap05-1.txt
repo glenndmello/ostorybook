@@ -1,0 +1,10 @@
+[mettre à jour la capture d'écran]
+
+[remplacer dans 5.2, "Apparence"]
+Apparence : vous pouvez choisir la police de caractères que va utiliser
+ oStorybook. Il y a deux polices différentes l'une concerne l'aspect général
+ (menu, tableau, etc...), l'autre s'applique à la partie texte de l'editeur
+(pour les notes, sommaires, descriptions, etc...). Pour changer, cliquez sur le
+ bouton correspondant.
+Vous pouvez aussi cocher l'option d'utilisation du mode "Dactylo" comme
+ interface au lancement de oStorybook.

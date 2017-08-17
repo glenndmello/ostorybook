@@ -1,0 +1,16 @@
+[ajout du chapitre 18.7]
+
+18.7 Renuméroter les scènes
+
+Le menu Outils > Renuméroter les scènes permet de changer automatiquement le
+ numéro des scènes en une seule opération. Le nouveau numéro calculé incorpore:
+- le numéro de la partie: nombre de 1 à 99 le plus à gauche
+- le numéro du chapitre: nombre de 1 à 99 en partie centrale
+- un numéro séquentiel de 0 à 990, numéroté de 10 en 10
+
+Le numéro ainsi calculé sera un nombre compris entre 101000 et 999990. La
+ numérotation de 10 en 10 permet d'insérer de nouvelles scènes plus facilement.
+
+Attention: les deux seules contraintes à respecter pour cette opération globale
+ sont que le numéro des chapitres soit bien compris dans la fourchette 1 à 99,
+ et que vous n'avez pas plus de 99 scènes dans un même chapitre.

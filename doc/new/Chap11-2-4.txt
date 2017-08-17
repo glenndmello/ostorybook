@@ -1,0 +1,19 @@
+[capture d'écran à actualiser]
+
+[texte du chapitre 11.2.4 à remplacer par]
+Le format traditionnel du Web, le HTML, sera certainement celui que vous
+ préférerez, avec le XML que nous verrons plus loin. Le HTML généré par
+ oStorybook est tout à fait conforme au standard. L'option à configurer
+ éventuellement est l'utilisation d'un CSS personnel. Comme cette option n'est
+ nullement obligatoire, et surtout si vous ne connaissez rien au CSS, vous
+ pouvez tranquillement l'ignorer. Si vous décidez de l'utiliser, il vous faudra
+ indiquer le nom du fichier CSS à utiliser, voir le chapitre "16. Donner du
+ style à votre document final".
+
+L'option "Navigation avec images" permet d'insérer des images (début, suivant,
+ précédent, fin, retour au sommaire) dans la mini barre de navigation qui est
+ créée lors d'une exportation "Multi fichiers".
+
+L'option "Insérer un saut de page..." permet de définir un style particulier
+ pour chaque titre de partie ou de chapitre pour le cas d'une exportation en
+ un seul fichier.

@@ -1,0 +1,3 @@
+[ajouter à la fin du 15.3]
+Note: si vous faites un click droit sur l'en-tête de colonne d'une scène vous
+aurez la possibilité d'accéder directement à l'éditeur de scène.

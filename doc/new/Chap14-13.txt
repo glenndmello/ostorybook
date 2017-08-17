@@ -1,0 +1,7 @@
+[ajout à la suite du 14.12]
+14.13 Options
+Les vues "Gérer les chapitres et les scènes", "Vue Chronologique", "Livre" et
+ "Memo" peuvent avoir des paramètres supplémentaires. Ceux-ci sont accessibles
+ directement dans chaque vue via l'icône d'outil dans l'onglet de la vue. Ces
+ paramètres sont aussi accessibles via le menu Vue>Outils. Essayez de modifier
+ les différents éléments pour voir l'effet rendu.

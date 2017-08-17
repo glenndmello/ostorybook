@@ -1,0 +1,24 @@
+Notes pour le développeur
+
+a) Développement: phase de test et mise au point:
+Le lancement s'effectue avec le paramètre --dev dans la commande, exemple:
+    java -jar oStorybook.jar --dev
+
+Pour développer une nouvelle fonction, prendre soin de faire précéder la
+fonction par un test de la valeur testFunction dans MainMenu. Si cette
+valeur est vrai alors la fonction peut être testée. Exemple pour tester la
+nouvelle fonction DlgImport dans MainMenu:
+    if (!testFunction) EnvUtil.notAvailable();
+    else DlgImport.show(mainFrame);
+
+Une fois la mise au point terminée il suffit d'enlever le test de testFucntion.
+Exemple:
+    DlgImport.show(mainFrame);
+
+Si la fonction n'est pas appelée dans MainMenu, il faut tester la valeur devTest
+dans SbApp. Exemple:
+    if (SbApp.isDevTest()) {
+	//fonction à tester
+    } else {
+	//ne rien faire
+    }

@@ -1,0 +1,26 @@
+html { /*  document */
+    font:  12px Verdana, "Bitstream Vera Sans", sans-serif;
+    color: #404040;
+    background-color: #F9F9F9;
+}
+
+body { /*  corps du document */
+    margin: 0;
+    font:  12px Verdana, "Bitstream Vera Sans", sans-serif;
+    color: #404040;
+    background: url(img/top.png) repeat-x top, url(img/bottom.png) repeat-x bottom;
+}
+
+h1 {
+    background-color: #35592B;
+    border: solid #6B4E27;
+    border-width: 4px;
+    border-radius: 4px;
+    margin: 0px 2px;
+    padding: 5px 8px;
+    white-space: nowrap;
+    font: 25px text_me_oneregular, sans-serif;
+    color: #FFFFFF;
+    text-align: left;
+}
+

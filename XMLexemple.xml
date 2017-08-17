@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<book>
+    <info>
+	<title>Texte</title>
+	<subtitle>Texte</subtitle>
+	<author>Texte</author>
+	<copyright>Texte</copyright>
+	<date>date de création</date>
+	<abstract>Text</abstract>
+	<notes>Texte</notes>
+    </info>
+    <options>
+	<chrono zoom="integer" layoutDirection="boolean" showDateDiff="boolean" />
+	<book zoom="integer" heightFactor="integer" />
+	<manage zoom="integer" columns="integer" />
+	<reading zoom="integer" fontSize="integer" />
+	<lastUsedPart part="integer" />
+	<odf use="boolean" HtmlScenes="boolean" htmlDescr="boolean" useTemplate="1/2/3">
+	    <template>le fichier de template</template>
+	</odf>
+	<memoria balloon="boolean" />
+	<export directory="String">
+	    <chapter numbers="boolean" roman="boolean"
+		title="boolean" date="boolean" />
+	    <scene title="boolean" separator="string" />
+	    <part title="boolean" />
+	    <csv quotes="boolean" comma="boolean" />
+	    <txt separator="string" />
+	    <html css="boolean" cssfile="string" multi="boolean">
+		<cssfile>String</cssfile>
+	    </html>
+	    <pdf size="string" landscape="boolean" />
+	</export>
+	<layout last="String" />
+    </options>
+    <strand id="integer" abbreviation="string"
+	name="string" color="integer" sort="integer">
+	<notes>Texte</notes>
+    </strand>
+    <part id="integer" number="integer" name="string"
+	superpart="integer" creation="timestamp">
+	<objective date="timestanp" done="timestamp" chars="integer" />
+	<notes>Texte</notes>
+    </part>
+    <chapter id="integer" part="integer" number="integer">
+	<title>Texte</title>
+	<objective date="timestanp" done="timestamp" chars="integer" />
+	<description>Texte</description>
+	<notes>Texte</notes>
+    </chapter>
+    <scene id="integer" number="integer"
+        chapter="integer" strand="integer"
+	sceneTs="timestamp" status="integer"
+	informative="boolean">
+	<title>Texte</title>
+	<objective date="timestanp" done="timestamp" chars="integer" />
+	<odf>String</odf>;
+	<person id="integer" />
+	<item id="integer" />
+	<location id="integer" />
+	<strand id="integer" />
+	<description>Texte</description>
+	<notes>Texte</notes>
+    </scene>
+    <attribute id="integer"
+	    key="string"
+	    value="string" />
+    <category id="integer"
+	    sort="integer"
+	    name="string"
+	    sup="integer" />
+    <gender id="integer"
+	    name="string"
+	    childhood="integer"
+	    adolescence="integer"
+	    adulthood="integer"
+	    retirement="integer"
+	    icone="string" />
+    <idea id="integer"
+	    status="integer"
+	    category="string">
+	    <notes>Texte</notes>
+    </idea>
+    <item id="integer"
+	    category="string"
+	    name="string"
+	    icone="string">
+	    <description>Texte</description>
+	    <notes>Texte</notes>
+    </item>
+    <location id="integer"
+	    name="string"
+	    address="string"
+	    city="string"
+	    country="string"
+	    altitude="integer"
+	    site="integer">
+	    <description>Texte</description>
+	    <notes>Texte</notes>	
+    </location>
+    <memo id="integer"
+	    cateory="string"
+	    name="string">
+	    <description>Texte</description>
+	    <notes>Texte</notes>
+    </memo>
+    <person id="integer"
+	    firstname="string"
+	    lastname="string"
+	    abbreviation="string"
+	    gender="integer"
+	    birthday="date"
+	    death="date"
+	    occupation="string"
+	    color="integer"
+	    category="integer">
+	    <attribute id="integer" />
+	    <description>Texte</description>
+	    <notes>Texte</notes>
+    </person>
+    <relationship id="integer"
+	    person1="integer"
+	    person2="integer";
+	    startScene="integer"
+	    endScene="integer">
+	    <person id="integer" />
+	    <item id="integer" />
+	    <location id="integer" />
+	    <description>Texte</description>
+	    <notes>Texte</notes>
+    </relationship>
+    <tag id="integer"
+	    cateory="string"
+	    name="string"
+	    icone="string">
+	    <description>Texte</description>
+	    <notes>Texte</notes>
+    </tag>
+    <timevent id="integer" 
+	    title="integer"
+	    time="timestamp"
+	    step="integer"
+	    category="integer">
+	    <notes>Texte</notes>
+    </timevent>
+</book>

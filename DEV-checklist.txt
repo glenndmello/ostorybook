@@ -1,0 +1,19 @@
+Check-list du développeur
+
+1. Publier une nouvelle version:
+- au moins 20 jours avant, solliciter les traducteurs, collationner les retours
+- vérifier que Versions.txt est à jour
+- préparer le message d'annonce dans le dossier Versions
+- construire les paquets avec (build.xml).build-app-all
+- compléter avec la construction du paquet Debian et RPM sous console
+- préparer les repositories de Tuxfamily et Sourceforge (création d'un dossier
+  pour la nouvelle version
+- uploader la nouvelle version (sur tuxfamily et sourceforge) depuis le dossier
+  distrib
+- modifier Sourceforge (indicateur de system des fichiers)
+- uploader le Versions.txt sur Tuxfamily (site et repository) et Sourceforge
+- publier le message d'annonce de la version
+- créer un nouveau sous-dossier de la version dans distrib et y transférer tous
+  les paquets de la version et le fichier Versions.txt
+- insérer la rubrique de la prochaine version dans Versions.txt
+- changer le numéro de version dans: SbConstants, build.xml

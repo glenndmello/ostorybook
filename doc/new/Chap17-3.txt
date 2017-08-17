@@ -1,0 +1,14 @@
+[ajout du chapitre 17.3]
+
+Dans le chapitre "5. Préférences" vous avez utilisé le menu Editer qui offre
+d'autres possibilités:
+- copier le livre dans le presse-papier: copier le texte de votre livre dans le
+presse-papier, qui est similaire à l'exportation au format TXT.
+- copier du résumé dans le presse-papier: copier les informations globales de
+votre ouvrage (titre, auteur, etc...) dans le presse-papier.
+- copier des éléments: copier des composantes (Fils, Personnages, Lieux,
+Objets) vers un autre fichier.
+
+Pour utiliser ce qui a été copié dans le presse-papier il vous suffit
+de faire appel à la fonction coller du logiciel cible (par exemple le
+bloc-note).

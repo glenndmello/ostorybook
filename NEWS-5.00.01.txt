@@ -1,0 +1,49 @@
+News 5.00.01 (01/12/2016)
+
+Cette nouvelle version adopte le numéro 5 comme numéro de version majeur puisque
+les évolutions sont très conséquentes. En particulier, elles portent sur
+l'interface utilisateur. En tout premier lieu l'ensemble du menu a été
+restructuré pour se présenter de manière plus logique. Mais ce n'est pas la 
+seule évolution notable. Toutefois la base de données sur laquelle se construit
+oStorybook reste stable et la compatibilité ascendente est assurée. Voici 
+quelques unes des évolutions les plus marquantes.
+
+a) Rapport "Occurrence des objets"
+Il existait déjà un rapport "Occurence des Personnages" et "Occurrence des 
+lieux", le rapport "Occurence des objets" manquait donc. Tous ces rapports
+se présentent de manière similaire.
+
+b) Vue "Storyboard"
+Cette vue est une représentation encore plus synthétique que celle de la vue
+"Chronologie". Elle représente l'enchaînement des Chapitres et des Scènes,
+sans détail sur les textes et notes.
+
+c) Suivi des évolutions
+La fonction permettant de s'assurer qu'une nouvelle version est disponible a
+été sensiblement améliorée. Un nouveau paramétrage permet de vérifier 
+périodiquement si une nouvelle version est disponible.
+
+d) Gestion des préférences
+La gestion des préférences a été modifiée. Celles ci sont maintenant 
+enregistrées dans un fichier "INI".
+
+e) Exportation
+La fonction d'exportation a été étendue de manière à offrir de nouvelles
+possibilités. La qualité des fichiers HTML est accrue.
+
+f) Vérification orthographique
+L'outil de vérification orthographique est réintroduit. Il est accompagné d'un
+outil séparé permettant de créer des dictionnaires compatibles. Les
+dictionnaires ne sont plus intégré au paquetage d'origine, il faut télécharger 
+celui disponible pour la langue souhaitée, ou en créer un partir d'une liste de
+mots et avec l'outil spécifique BuildDictionary, voir la page "Personnalisation"
+du site.
+
+g) Icône personnalisée
+Il est maintenant possible de personnaliser l'icône associée à un Genre ou à un
+Objet, permettant ainsi de mieux caractériser les personnages et les objets.
+L'image à utiliser doit avoir une dimension de 64x64 pixels. L'image doit être
+au format PNG et elle peut être enregistrée n'importe où dans l'ordinateur, 
+toutefois il est fortement recommandé de la stocker dans un dossier spécifique 
+enregistré dans le même dossier que celui où est enregistré le fichier de 
+travail oStorybook. Voir à ce sujet les chapitres 12.7 et 12.11 du Manuel.

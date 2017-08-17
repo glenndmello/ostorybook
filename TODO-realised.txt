@@ -1,0 +1,175 @@
+Editeur fait pour la 5.00.04
+----------------------------
+Dans une scène, possibilité d'appeler directement l'éditeur d'un personnage,
+lieux, objet ou étiquette (via bouton).
+
+Mode Typist (dactylo) fait pour la 5.00.04
+------------------------------------------
+Développer un mode spécifique permettant à l'auteur de se focaliser sur le
+texte.
+- développer une vue plein écran ne contenant que le texte (summary) d'une scène
+
+Exportation fait pour la 5.00.03
+--------------------------------
+Restructurer/Réécrire l'ensemble du module d'exportation, réduire les formats à:
+- txt (book ou table), séparateur de champs tabulation
+- csv (table seulement, reprend l'export txt en remplaçant les tabulations
+par le caractère de séparation des colonnes)
+- xml (database ou table)
+- html (book et table)
+- sql (database)
+Deux grands modules:
+- book (rendu tu texte)
+- table (rendu des tables)
+
+Internationalisation fait pour la 5.00.03
+-----------------------------------------
+Restructuration de tous les messages pour simplification.
+
+TODO Import Xml fait pour la 5.00.03
+------------------------------------
+Objet: fonction à créer pour permettre l'import de données depuis un fichier
+qui a été exporter.
+
+Options:
+- choix du fichier à importer
+- sélection des objets à importer
+- option "remplacer/ajouter/ignorer" après vérification de chaque objet
+
+TODO Gender fait pour la 5.00.01
+--------------------------------
+Objectif: ajouter la possibilité de personnaliser l'icone.
+
+a) ajouter à la table "Gender" une colonne "icone" de type String destinée à 
+recevoir le nom de l'icone.
+
+b) modifier le EntityEditor des Gender pour avoir le type d'objet "icone à 
+sélectionner". Les genres 1=Male et 2=Female ne sont pas modifiables.
+
+e) s'assurer que partout où le Gender est employé c'est bien un getIcon qui est
+utilisé.
+
+TODO Preferences fait 5.00.01
+-----------------------------
+Les préférences sont actuellement enregistrées dans un fichier h2.db, le but
+du TODO est de convertir ce système en un modèle de type INI ou properties ou 
+XML. Les modules impactés sont principalement:
+- model/hbn/dao/PreferenceDAO (à supprimer)
+- model/hbn/dao/PreferenceDAOImpl (à supprimer)
+- model/hbn/entity/Preference.hbm.xml (à supprimer)
+- model/hbn/entity/Preference (à supprimer)
+- model/PreferenceModel (à supprimer)
+- toolkit/PrefUtil (à réécrire)
+
+TODO Export Xml réalisé pour la version 5.00.01
+-----------------------------------------------
+Objet: définir l'export au format XML
+
+Structure:
+Définir le format XML en s'inspirant de la DTD DocBook v5.
+
+TODO Interface réalisé pour la version 5.00.01
+----------------------------------------------
+Objectif: convertir autant que possible les dialogues sur le modèle Netbeans.
+Les dialogues convertis portent le nom DlgXXX au lieu de XXXDialog.
+Nota: lorsque tous les dialogues seront convertis les Abstract... seront 
+à supprimer.
+
+TODO Timeline réalisé pour la version 4.10.04
+---------------------------------------------
+Objectif: remplacer la bibliothèque JFreeChart par un module répondant plus
+spécifiquement aux besoins de oStorybook.
+
+Problématique: oStorybook utilise trois tpes de représentation graphique:
+- graphique en barres verticales pour les rapports "occurence de..."
+- graphique en anneaux (ou cibles ou "pie") pour la visualisation Planning
+- graphique de type "timeline" pour les rapports "apparition par date"
+
+Observations : La vue Planning pourrait se faire sous forme d'un graphique en
+barres horizontals ou verticales avec une apparance x% sur 100%. Ce qui
+permettrait d'uniformiser le type de graphique. 
+
+Typologie : La représentation de l'information se résume à en une serie de
+données selon le descriptif suivant:
+- id (identifiant de la données sous forme d'un String ou d'un Integer)
+- v1 (valeur de début type Date ou Integer)
+- v2 (valeur de fin type Date ou Integer)
+- c1 (couleur de la barre type Color)
+- c2 (couleur de la partie restante de la barre type Color)
+Il y a donc deux types de séries:
+- date: dans ce cas id est un String, v1 et v2 sont des Date
+- valeur numérique: dans ce cas id, v1 et v2 sont des Integer
+
+Fonctions : Le graphique doit être orienté (Vertical ou Horizontal par défaut
+ce sera Horizontal). La fonction de base d'appel du graphique est de la forme:
+createChart(titre, type, orientation, dataset)
+où:
+- titre : est un String donnant le titre du graphique
+- type : est un indicateur définissant le type de données (DATE ou NUMERIC)
+- orientation : est un indicateur définissant l'orientation (VERTICAL ou
+HORIZONTAL)
+- dataset : est une donnée de type ArrayList intialisé par une une fonction
+createDataset(). dataset comprend entre autres une liste d'items dont les champs
+sont :
+-- id: un String de 'id concerné
+-- debut : date de début de l'élément
+-- fin : date de fin de l'élément
+-- value : valeur de l'élément
+-- subItem : un lien vers une liste d'éléments subordonnés
+
+TODO updater réalisé pour la version 5.00.01
+--------------------------------------------
+Objet: Modifier la procédure de vérification de la version de manière à
+permettre le choix entre:
+- vérifier à chaque lancement de oStorybook
+- vérifier 3 fois par an, à date fixe
+- ne jamais vérifier (vérification manuelle seulement via le menu
+helpCheckUpdatesActionPerformed)
+La valeur "SbConstants.URL.DO_UPDATE" est à remplacer pak une key
+"PreferenceKey.DO_UPDATER" qui prendra une des valeurs:
+- 0 = non paramétré (dans ce cas on forcera la clé à 2 sans message ni
+vérification, en principe c'est le cas juste après installation)
+- 1 = jamais de vérification
+- 2 = pour vérifier 3 fois par an (valeur par défaut)
+- 3 = pour vérifier à chaque lancement
+
+Il faut ajouter un paramètre général "PreferenceKey.LAST_UPDATER":
+- date de la dernière vérification
+
+Si le Versions.txt a changé c'est qu'une nouvelle version est disponible. Dans
+ce cas il faut afficher un message d'information accompagné de l'affichage du
+Versions.txt
+
+L'utilisateur valide la prise de connaissance du message. Il décidera de
+télécharger et installer la nouvelle version en dehors de oStorybook.
+
+Dans tous les cas à la fin de la vérification la key
+"PreferenceKey.LAST_UPDATER" est modifiée pour recevoir la date du jour.
+
+Note: le checkForUpdate nécessitera une connexion Internet opérationnelle, 
+prévoir le cas d'une utilisation "off line" pour ne pas renvoyer une erreur.
+
+La vérification 3 fois par an se fait à date fixe après les: 21 avril, 
+1er septembre et 1er décembre. Donc il faut calculer si la date de la 
+dernière vérification est antérieure à l'une de ces dates.
+
+Dialogue Editeur réalisé pour la version 5.00.02
+------------------------------------------------
+Suggestion de Stephan, mémorisation de la taille et de la position.
+
+Editeur externe réalisé pour la vesion 5.00.02
+----------------------------------------------
+Objet : remplacer LibreOffice par la possibilité d'un éditeur externe (dont LO).
+Principe : c'est le système, bien configuré, qui lancera le logiciel ad'hoc.
+Proposer le choix entre : LibreOffice (odt), Word (doc), Texte brut (txt),
+LyX (lyx). autre (extension à préciser). Ne pas oublier de maintenir l'option
+du choix d'un fichier modèle.
+
+Géolocalisation réalisé pour la version 5.00.02
+-----------------------------------------------
+Objet : réintégrer la géolocalisation des lieux sur GoogleMaps à partir des
+coordonnées enregistrées dans les lieux.
+
+Personnalisation de la barre d'outils réalisé pour la version 5.00.02
+---------------------------------------------------------------------
+Objet : ajouter un module de personnalisation de la barre d'outils
